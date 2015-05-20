@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Basic Calculator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="default.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<div class="container" ng-app="calcApp" ng-controller="computeCtrl" ng-view=>
+	<div class="jumbotron">
+	<table class"table table-bordered vertical-center-row">
+		<thead>
+			<div class="container-small display">
+				{{ displayValue }}
+			</div>
+		</thead>
+		<tbody>
+			<tr>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('1')" value="1">1</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('2')" value="2">2</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('3')" value="3">3</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="selectedOperation('0','0','C')" value="C">C</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('4')" value="4">4</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('5')" value="5">5</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('6')" value="6">6</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="operationClicked('*')" value="*">*</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('7')" value="7">7</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('8')" value="8">8</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('9')" value="9">9</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="operationClicked('+')" value="+">+</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="digitClicked('0')" value="0">0</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="operationClicked('/')" value="/">/</button>
+				</td>
+				<td>
+					<button type="button" class="btn-block btn-info btn-lg" ng-click="operationClicked('-')" value="-">-</button>
+				</td>
+				<td>
+					<input type="submit" class="btn-block btn-default btn-block btn-lg" value="=" ng-click="compute()">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+ </div>
+ <script src="computeCtrl.js"></script>
+
+</body>
+</html>

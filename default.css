@@ -1,0 +1,29 @@
+.display {
+    background-color: #DDDDDD;
+    font-family: monospace;
+    font-size: 27px;
+    font-weight: bold;
+    padding: 0 4px;
+    text-align: right;
+    width: 185px;
+    overflow: hidden;
+}
+.container {
+  position: relative;
+  height: 50rem;
+  border: 1px solid;
+}
+
+.jumbotron {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border: 1px dashed deeppink;
+}
+
+.container-small {
+	position: relative;
+	height: 8rem;
+	border: 1px solid;
+}
